@@ -36,7 +36,7 @@ const Option = ({ option, flippedProp, disabled }) => {
         <div
             ref={dragRef}
             onClick={handleClick}
-            className={card ${flipped ? 'flipped' : ''} ${disabled ? 'disabled' : ''}}
+            className={`card ${flipped ? 'flipped' : ''} ${disabled ? 'disabled' : ''}`}
             style={{
                 opacity: disabled ? 0.5 : 1,  // Set opacity to 0.5 if disabled, otherwise 1
                 cursor: disabled ? 'not-allowed' : 'pointer',  // Change cursor based on disabled state
@@ -57,7 +57,7 @@ const DropArea = ({ onDrop, label, className }) => {
     });
 
     return (
-        <div ref={dropRef} className={drop-area-${className}}>
+        <div ref={dropRef} className={`drop-area-${className}`}>
             Drop Here if {label}
         </div>
     );
@@ -81,9 +81,9 @@ const QuestionComponent = () => {
     useEffect(() => {
         const fetchQuestion = async () => {
             try {
-                const response = await axios.get(http://localhost:4000/api/v1/questions/${questionId}, {
+                const response = await axios.get(`http://localhost:4000/api/v1/questions/${questionId}`, {
                     headers: {
-                        Authorization: ${token},
+                        Authorization: `${token}`,
                     },
                 });
                 setQuestion(response.data.question);
@@ -110,7 +110,7 @@ const QuestionComponent = () => {
                 selectedOptions: [...selectedTrueOptions, ...selectedFalseOptions],
             }, {
                 headers: {
-                    Authorization: ${token},
+                    Authorization: `${token}`,
                 },
             });
 
@@ -124,9 +124,9 @@ const QuestionComponent = () => {
 
                 try {
                     // Fetch next question only on success if needed
-                    const nextQuestionResponse = await axios.get(http://localhost:4000/api/v1/questions/${response.data.nextQuestionId}, {
+                    const nextQuestionResponse = await axios.get(`http://localhost:4000/api/v1/questions/${response.data.nextQuestionId}`, {
                         headers: {
-                            Authorization: ${token},
+                            Authorization: `${token}`,
                         },
                     });
                     setQuestion(nextQuestionResponse.data.question);
@@ -171,9 +171,9 @@ const QuestionComponent = () => {
 
     const handleManualCompletion = async () => {
         try {
-            const response = await axios.patch(http://localhost:4000/api/v1/question/${question._id}/mark-completed, {}, {
+            const response = await axios.patch(`http://localhost:4000/api/v1/question/${question._id}/mark-completed`, {}, {
                 headers: {
-                    Authorization: ${token},
+                    Authorization: `${token}`,
                 },
             });
 
@@ -198,7 +198,7 @@ const QuestionComponent = () => {
                 setFlippedCards(correctOptionIds);
 
                 setTimeout(() => {
-                    navigate(/timeline);
+                    navigate(`/timeline`);
                 }, 5000);
             }
         } catch (error) {
