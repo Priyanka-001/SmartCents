@@ -113,7 +113,7 @@ function MyMap() {
     const token = sessionStorage.getItem("token"); // or wherever you're storing the JWT
 
     try {
-      const response = await fetch('http://localhost:4000/api/v1/invest', {
+      const response = await fetch('https://smart-cents-backend.vercel.app/api/v1/invest', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

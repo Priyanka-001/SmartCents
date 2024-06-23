@@ -17,7 +17,7 @@ const BudgetRule = ({ onSalarySubmit }) => {
     // Retrieve the token from session storage
     const token = sessionStorage.getItem('token');
     try {
-      const response = await fetch('http://localhost:4000/api/v1/income/add', {
+      const response = await fetch('https://smart-cents-backend.vercel.app/api/v1/income/add', {
         method: 'POST',
         headers: {
           'Authorization': `${token}`, // Use the token from session storage

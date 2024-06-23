@@ -28,7 +28,7 @@ const colors = ['#02B2AF', '#2E96FF'];
         const token = sessionStorage.getItem("token");
 
         const response = await fetch(
-          "http://localhost:4000/api/v1/categories",
+          "https://smart-cents-backend.vercel.app/api/v1/categories",
           {
             method: "GET",
             headers: {
@@ -78,7 +78,7 @@ const colors = ['#02B2AF', '#2E96FF'];
         const token = sessionStorage.getItem("token");
 
         const response = await fetch(
-          "http://localhost:4000/api/v1/getSavings",
+          "https://smart-cents-backend.vercel.app/api/v1/getSavings",
           {
             method: "GET",
             headers: {

@@ -22,7 +22,7 @@ const ExpenseForm = ({ onAddExpense }) => {
         const fetchBudgetData = async () => {
             try {
                 const token = sessionStorage.getItem("token");
-                const response = await fetch("http://localhost:4000/api/v1/income/get", {
+                const response = await fetch("https://smart-cents-backend.vercel.app/api/v1/income/get", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -45,7 +45,7 @@ const ExpenseForm = ({ onAddExpense }) => {
         const fetchCategoriesData = async () => {
             try {
                 const token = sessionStorage.getItem("token");
-                const response = await fetch("http://localhost:4000/api/v1/categories", {
+                const response = await fetch("https://smart-cents-backend.vercel.app/api/v1/categories", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -131,7 +131,7 @@ const ExpenseForm = ({ onAddExpense }) => {
     };
 
     const saveCategory = async (type, amountValue) => {
-        const url = 'http://localhost:4000/api/v1/income/addCategory';
+        const url = 'https://smart-cents-backend.vercel.app/api/v1/income/addCategory';
         const token = sessionStorage.getItem("token");
         const data = {
             categoryName: description,
@@ -157,7 +157,7 @@ const ExpenseForm = ({ onAddExpense }) => {
             onAddExpense({ description, amount: amountValue, category: type });
 
             // Fetch updated budget data
-            const updatedBudgetResponse = await fetch("http://localhost:4000/api/v1/income/get", {
+            const updatedBudgetResponse = await fetch("https://smart-cents-backend.vercel.app/api/v1/income/get", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

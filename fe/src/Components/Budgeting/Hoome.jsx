@@ -23,7 +23,7 @@ const Home = ({ onSalarySubmit }) => {
   const fetchBudgetData = async () => {
     try {
       const token = sessionStorage.getItem("token");
-      const response = await fetch("http://localhost:4000/api/v1/income/get", {
+      const response = await fetch("https://smart-cents-backend.vercel.app/api/v1/income/get", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -56,7 +56,7 @@ const Home = ({ onSalarySubmit }) => {
       try {
         const token = sessionStorage.getItem("token");
         const necessitiesResponse = await fetch(
-            "http://localhost:4000/api/v1/getNecessity",
+            "https://smart-cents-backend.vercel.app/api/v1/getNecessity",
             {
               method: "GET",
               headers: {
@@ -67,7 +67,7 @@ const Home = ({ onSalarySubmit }) => {
         );
 
         const wantsResponse = await fetch(
-            "http://localhost:4000/api/v1/getWant",
+            "https://smart-cents-backend.vercel.app/api/v1/getWant",
             {
               method: "GET",
               headers: {

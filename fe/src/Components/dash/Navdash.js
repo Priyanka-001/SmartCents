@@ -8,7 +8,7 @@ import "./Navdash.css";
 
 export const handleLogout = async () => {
   try {
-    const response = await fetch("http://localhost:4000/api/v1/logout", {
+    const response = await fetch("https://smart-cents-backend.vercel.app/api/v1/logout", {
       method: "GET", // Assuming your logout endpoint uses GET method
       headers: {
         "Content-Type": "application/json",
@@ -45,7 +45,7 @@ function Navbar() {
     const fetchUserData = async () => {
       try {
         const token = sessionStorage.getItem("token");
-        const response = await fetch("http://localhost:4000/api/v1/currentUser", {
+        const response = await fetch("https://smart-cents-backend.vercel.app/api/v1/currentUser", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

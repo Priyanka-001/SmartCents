@@ -13,13 +13,13 @@ const GamePath = () => {
     useEffect(() => {
         const fetchQuestions = async () => {
             try {
-                const response = await axios.get('http://localhost:4000/api/v1/questions', {
+                const response = await axios.get('https://smart-cents-backend.vercel.app/api/v1/questions', {
                     headers: {
                         Authorization: `${token}`,
                     },
                 });
 
-                const userResponse = await axios.get('http://localhost:4000/api/v1/currentUser', {
+                const userResponse = await axios.get('https://smart-cents-backend.vercel.app/api/v1/currentUser', {
                     headers: {
                         Authorization: `${token}`,
                     },

@@ -16,7 +16,7 @@ const SelectNecessitiesWants = ({ onItemsSubmit }) => {
       try {
         const token = sessionStorage.getItem("token");
 
-        const response = await fetch("http://localhost:4000/api/v1/categories", {
+        const response = await fetch("https://smart-cents-backend.vercel.app/api/v1/categories", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -114,7 +114,7 @@ const SelectNecessitiesWants = ({ onItemsSubmit }) => {
       const token = sessionStorage.getItem("token");
 
       const response = await fetch(
-          "http://localhost:4000/api/v1/income/addManyCat",
+          "https://smart-cents-backend.vercel.app/api/v1/income/addManyCat",
           {
             method: "POST",
             headers: {

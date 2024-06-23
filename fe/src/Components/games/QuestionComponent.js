@@ -81,7 +81,7 @@ const QuestionComponent = () => {
     useEffect(() => {
         const fetchQuestion = async () => {
             try {
-                const response = await axios.get(`http://localhost:4000/api/v1/questions/${questionId}`, {
+                const response = await axios.get(`https://smart-cents-backend.vercel.app/api/v1/questions/${questionId}`, {
                     headers: {
                         Authorization: `${token}`,
                     },
@@ -105,7 +105,7 @@ const QuestionComponent = () => {
 
     const handleSubmit = async () => {
         try {
-            const response = await axios.post('http://localhost:4000/api/v1/submit-answer', {
+            const response = await axios.post('https://smart-cents-backend.vercel.app/api/v1/submit-answer', {
                 questionId: question._id,
                 selectedOptions: [...selectedTrueOptions, ...selectedFalseOptions],
             }, {
@@ -124,7 +124,7 @@ const QuestionComponent = () => {
 
                 try {
                     // Fetch next question only on success if needed
-                    const nextQuestionResponse = await axios.get(`http://localhost:4000/api/v1/questions/${response.data.nextQuestionId}`, {
+                    const nextQuestionResponse = await axios.get(`https://smart-cents-backend.vercel.app/api/v1/questions/${response.data.nextQuestionId}`, {
                         headers: {
                             Authorization: `${token}`,
                         },
@@ -171,7 +171,7 @@ const QuestionComponent = () => {
 
     const handleManualCompletion = async () => {
         try {
-            const response = await axios.patch(`http://localhost:4000/api/v1/question/${question._id}/mark-completed`, {}, {
+            const response = await axios.patch(`https://smart-cents-backend.vercel.app/api/v1/question/${question._id}/mark-completed`, {}, {
                 headers: {
                     Authorization: `${token}`,
                 },
