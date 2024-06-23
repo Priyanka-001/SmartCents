@@ -3,7 +3,7 @@ const Question = require('./models/question');
 
 const questions = [
     {
-        questionText: 'Which of the following are public sector banks in India?',
+        questionText: 'Which of the following are public sector banks in India?(Choose 5 correct answers.)',
         options: [
             { text: 'State Bank of India', isCorrect: true },
             { text: 'Punjab National Bank', isCorrect: true },
@@ -17,7 +17,7 @@ const questions = [
         ]
     },
     {
-        questionText: 'Which documents are accepted for KYC (Know Your Customer) in Indian banks?',
+        questionText: 'Which documents are accepted for KYC (Know Your Customer) in Indian banks?(Choose 5 correct answers.)',
         options: [
             { text: 'Aadhaar Card', isCorrect: true },
             { text: 'Voter ID', isCorrect: true },
@@ -31,7 +31,7 @@ const questions = [
         ]
     },
     {
-        questionText: 'Which of the following are types of savings accounts offered by Indian banks?',
+        questionText: 'Which of the following are types of savings accounts offered by Indian banks?(Choose 6 correct answers.)',
         options: [
             { text: 'Basic Savings Bank Deposit Account', isCorrect: true },
             { text: 'Recurring Deposit Account', isCorrect: false },
@@ -45,7 +45,7 @@ const questions = [
         ]
     },
     {
-        questionText: 'What are the different electronic funds transfer systems available in India?',
+        questionText: 'What are the different electronic funds transfer systems available in India?(Choose 5 correct answers.)',
         options: [
             { text: 'NEFT', isCorrect: true },
             { text: 'IMPS', isCorrect: true },
@@ -59,7 +59,7 @@ const questions = [
         ]
     },
     {
-        questionText: 'Which Indian banks offer digital-only banking services?',
+        questionText: 'Which Indian banks offer digital-only banking services?(Choose 7 correct answers.)',
         options: [
             { text: 'Digibank by DBS', isCorrect: true },
             { text: 'Paytm Payments Bank', isCorrect: true },
@@ -73,7 +73,7 @@ const questions = [
         ]
     },
     {
-        questionText: 'Which of the following types of insurance are commonly available in India?',
+        questionText: 'Which of the following types of insurance are commonly available in India?(Choose 7 correct answers.)',
         options: [
             { text: 'Life Insurance', isCorrect: true },
             { text: 'Health Insurance', isCorrect: true },
@@ -87,7 +87,7 @@ const questions = [
         ]
     },
     {
-        questionText: 'Which factors are considered by credit rating agencies in India when determining a credit score?',
+        questionText: 'Which factors are considered by credit rating agencies in India when determining a credit score?(Choose 5 correct answers.)',
         options: [
             { text: 'Payment History', isCorrect: true },
             { text: 'Credit Utilization Ratio', isCorrect: true },
@@ -101,7 +101,7 @@ const questions = [
         ]
     },
     {
-        questionText: 'What are the documents required to take a loan in India?',
+        questionText: 'What are the documents required to take a loan in India?(Choose 7 correct answers.)',
         options: [
             { text: 'Aadhaar Card', isCorrect: true },
             { text: 'PAN Card', isCorrect: true },
@@ -115,7 +115,7 @@ const questions = [
         ]
     },
     {
-        questionText: 'What types of loans are provided by banks in India?',
+        questionText: 'What types of loans are provided by banks in India?(Choose 6 correct answers.)',
         options: [
             { text: 'Home Loan', isCorrect: true },
             { text: 'Travel Loan', isCorrect: false },
